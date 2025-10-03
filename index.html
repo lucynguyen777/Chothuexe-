@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>RentMoto — Thuê xe máy | Nhanh &amp; An toàn</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">🏍️ RentMoto</a>
+      <nav class="nav">
+        <a href="#models">Mẫu xe</a>
+        <a href="#pricing">Bảng giá</a>
+        <a href="#booking">Đặt xe</a>
+        <a href="#contact">Liên hệ</a>
+      </nav>
+      <button id="callBtn" class="cta">Đặt ngay</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-left">
+          <h1>Thuê xe máy nhanh — nhận xe trong 30 phút</h1>
+          <p class="lead">Giá minh bạch, xe bảo dưỡng định kỳ, giao tận nơi. Đặt trực tuyến — nhận xe &amp; đi ngay.</p>
+          <div class="hero-ctas">
+            <a href="#booking" class="btn btn-primary">Đặt xe ngay</a>
+            <a href="#models" class="btn btn-ghost">Xem mẫu xe</a>
+          </div>
+          <ul class="features">
+            <li>✔ Bảo hiểm cơ bản</li>
+            <li>✔ Hỗ trợ 24/7</li>
+            <li>✔ Thanh toán tại chỗ / chuyển khoản</li>
+          </ul>
+        </div>
+        <div class="hero-right">
+          <img alt="Motorbikes lineup" src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1200&auto=format&fit=crop" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Models -->
+    <section id="models" class="container section">
+      <h2>Mẫu xe</h2>
+      <div class="grid models-grid">
+        <article class="card">
+          <img alt="Yamaha Grande" src="https://images.unsplash.com/photo-1605276374318-2b0f3f01a7c7?q=80&w=800&auto=format&fit=crop">
+          <h3>Yamaha Grande</h3>
+          <p>Xe tay ga — tiết kiệm nhiên liệu, phù hợp city.</p>
+          <div class="meta">Tốc độ max: 90 km/h</div>
+        </article>
+        <article class="card">
+          <img alt="Honda Wave" src="https://images.unsplash.com/photo-1542367597-7a3d8d7350b8?q=80&w=800&auto=format&fit=crop">
+          <h3>Honda Wave</h3>
+          <p>Xe số bền bỉ, dễ lái, phù hợp di chuyển dài.</p>
+          <div class="meta">Tiêu thụ: 45 km/l</div>
+        </article>
+        <article class="card">
+          <img alt="Honda Air Blade" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=800&auto=format&fit=crop">
+          <h3>Honda Air Blade</h3>
+          <p>Xe tay ga cao cấp, ổn định, nhiều công nghệ.</p>
+          <div class="meta">Khoảng sáng gầm cao</div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="section pricing-section">
+      <div class="container">
+        <h2>Bảng giá cơ bản</h2>
+        <div class="pricing-grid">
+          <div class="price-card">
+            <h3>Xe số (Wave)</h3>
+            <div class="price">120.000₫/ngày</div>
+            <ul>
+              <li>KM vô hạn trong tỉnh</li>
+              <li>15.000₫/km ngoài tỉnh</li>
+            </ul>
+          </div>
+          <div class="price-card featured">
+            <h3>Xe tay ga (Grande/AirBlade)</h3>
+            <div class="price">150.000₫/ngày</div>
+            <ul>
+              <li>Giao tận nơi miễn phí (nội thành)</li>
+              <li>Bảo hiểm cơ bản kèm</li>
+            </ul>
+          </div>
+          <div class="price-card">
+            <h3>Xe phân khối nhỏ</h3>
+            <div class="price">300.000₫/ngày</div>
+            <ul>
+              <li>Hợp đồng 1 ngày trở lên</li>
+              <li>Bảo dưỡng đầy đủ</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Booking -->
+    <section id="booking" class="section booking-section">
+      <div class="container booking-grid">
+        <div class="booking-form-card">
+          <h2>Form đặt xe</h2>
+          <form id="rentalForm" autocomplete="on">
+            <label>
+              Họ &amp; tên
+              <input type="text" id="name" name="name" required placeholder="Nguyen Van A">
+            </label>
+
+            <label>
+              Số điện thoại
+              <input type="tel" id="phone" name="phone" required placeholder="0xxxxxxxx">
+            </label>
+
+            <label>
+              Email (tùy chọn)
+              <input type="email" id="email" name="email" placeholder="name@example.com">
+            </label>
+
+            <label>
+              Mẫu xe
+              <select id="model" required>
+                <option value="">-- Chọn mẫu --</option>
+                <option value="Wave">Honda Wave — 120,000₫/ngày</option>
+                <option value="Grande">Yamaha Grande — 150,000₫/ngày</option>
+                <option value="AirBlade">Honda Air Blade — 150,000₫/ngày</option>
+                <option value="SmallCC">Phân khối nhỏ — 300,000₫/ngày</option>
+              </select>
+            </label>
+
+            <div class="date-row">
+              <label>
+                Ngày nhận
+                <input type="date" id="startDate" required>
+              </label>
+              <label>
+                Ngày trả
+                <input type="date" id="endDate" required>
+              </label>
+            </div>
+
+            <label>
+              Địa điểm nhận (Địa chỉ / Quận)
+              <input type="text" id="pickup" placeholder="Ví dụ: 123 Đ. Lý Thường Kiệt, Hoàn Kiếm">
+            </label>
+
+            <label>
+              Ghi chú (mũ bảo hiểm, giao giờ cụ thể, v.v.)
+              <textarea id="notes" rows="3" placeholder="Ghi chú thêm..."></textarea>
+            </label>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Gửi đặt xe</button>
+              <button type="button" id="clearBookings" class="btn btn-ghost">Xóa bookings (dev)</button>
+            </div>
+
+            <div id="formMsg" class="form-msg" aria-live="polite"></div>
+          </form>
+        </div>
+
+        <aside class="booking-summary">
+          <h3>Đơn hàng tạm</h3>
+          <div id="bookingsList">Không có đơn nào — hãy đặt thử!</div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section contact-section">
+      <div class="container contact-grid">
+        <div>
+          <h2>Liên hệ</h2>
+          <p>Hotline: <strong>+84 9xx xxx xxx</strong></p>
+          <p>Email: <strong>rentmoto@example.com</strong></p>
+          <p>Địa chỉ: Hanoi, Vietnam — giao trong nội thành.</p>
+        </div>
+        <div class="map-placeholder">
+          <!-- Nếu deploy thật, thay bằng embed Google Maps -->
+          <img alt="Map placeholder" src="https://images.unsplash.com/photo-1482192596544-9eb780fc7f66?q=80&w=1000&auto=format&fit=crop">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> RentMoto — All rights reserved.</small>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
